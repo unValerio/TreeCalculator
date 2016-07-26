@@ -13,7 +13,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SergioEnrique/FormulaParser.git",
-                "reference": "f62828e93c77584abbf8d52eb10357a696a5067b"
+                "reference": "f818748fd12252cf65f401670a82b956e1ac8c87"
             },
             "type": "library",
             "autoload": {
@@ -22,7 +22,7 @@
                 }
             },
             "description": "PHP Formula like Excel parser as tree",
-            "time": "2016-07-26 21:29:51"
+            "time": "2016-07-26 21:46:45"
         }
     ],
     "packages-dev": [],
