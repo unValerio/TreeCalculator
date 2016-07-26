@@ -1,0 +1,11 @@
+{
+    "name": "valerio/tree-calculator",
+    "description": "PHP calculator of parsed trees",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+        	"Valerio\\" : "valerio/"
+        }
+    }
+}
