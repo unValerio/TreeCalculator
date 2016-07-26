@@ -1,0 +1,38 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "7a2ee50396f5d4eda5f496fde1675ca1",
+    "content-hash": "b4b32ed83306cce03becbee9cf15052d",
+    "packages": [
+        {
+            "name": "valerio/formula-parser",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SergioEnrique/FormulaParser.git",
+                "reference": "f62828e93c77584abbf8d52eb10357a696a5067b"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Valerio\\": "valerio/"
+                }
+            },
+            "description": "PHP Formula like Excel parser as tree",
+            "time": "2016-07-26 21:29:51"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "valerio/formula-parser": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

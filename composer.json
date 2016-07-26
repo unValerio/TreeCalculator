@@ -2,7 +2,12 @@
     "name": "valerio/tree-calculator",
     "description": "PHP calculator of parsed trees",
     "minimum-stability": "dev",
-    "require": {},
+    "repositories": [
+        {"type": "git", "url": "https://github.com/SergioEnrique/FormulaParser.git"}
+    ],
+    "require": {
+    	"valerio/formula-parser": "dev-master"
+    },
     "autoload": {
         "psr-4": {
         	"Valerio\\" : "valerio/"
