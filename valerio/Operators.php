@@ -57,7 +57,7 @@ class Operators
 			}
 
 			return array(
-				'index' => $stack[sizeof($stack)-1]['index'].'-'.$stack[0]['index'],
+				'index' => 'unknown',
 				'type' => 'Operand',
 				'subtype' => 'Number',
 				'value' => $result,
