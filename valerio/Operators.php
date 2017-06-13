@@ -7,7 +7,7 @@ namespace Valerio;
 class Operators
 {
 	// Ahorita sólo funciona para IF(TRUE,5,10)
-	public function startFunction($stack)
+	public static function startFunction($stack)
 	{
 		// Obtener el tipo de función
 		// $function = $stack[sizeof($stack)-1]['value'];
