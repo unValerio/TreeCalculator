@@ -29,7 +29,7 @@ class FormulaStack
 			}
 			else{
 				// No se hizo nada, se regresa el tempRow al stack
-				$this->stack[] = $row;
+				$this->stack[] = $this->tempRow;
 			}
 			// Se recetea tempRow
 			$this->tempRow = null;
