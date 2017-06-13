@@ -25,7 +25,6 @@ class FormulaStack
 			// Si tempRow es una resta y row es numero, la fila nueva es el valor en negativo
 			if ($this->tempRow['type'] === 'OperatorPrefix' && $this->tempRow['value'] === "-" && $row["subtype"] === "Number") {
 				$row["value"] = "-".$row["value"];
-				$this->stack[] = $row;
 			}
 			else{
 				// No se hizo nada, se regresa el tempRow al stack
@@ -34,8 +33,9 @@ class FormulaStack
 			// Se recetea tempRow
 			$this->tempRow = null;
 		}
+
 		// Esta es una pila inteligente que analiza el valor que tiene el último elemento y si es stop y coincide con su deep, entonces esa parte la analiza (convierte a clase función)
-		else if ($row['subtype'] === 'Stop') {
+		if ($row['subtype'] === 'Stop') {
 
 			$newStack = array($row);
 			do {
@@ -52,7 +52,6 @@ class FormulaStack
 			$this->tempRow = $row;
 		}
 		else{
-			// dump($row);
 			$this->stack[] = $row;
 		}
 	}
