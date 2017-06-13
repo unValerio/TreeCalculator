@@ -34,6 +34,16 @@ class Operators
 							$logical = 'TRUE';
 						}
 						break;
+					case '>': // mayor que
+						if ($newStack[0]['value'] > $newStack[2]['value']) {
+							$logical = 'TRUE';
+						}
+						break;
+					case '<': // menor que
+						if ($newStack[0]['value'] < $newStack[2]['value']) {
+							$logical = 'TRUE';
+						}
+						break;
 					case '<>': // diferente de
 						if ($newStack[0]['value'] != $newStack[2]['value']) {
 							$logical = 'TRUE';
