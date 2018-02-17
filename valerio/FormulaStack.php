@@ -26,6 +26,10 @@ class FormulaStack
 			if ($this->tempRow['type'] === 'OperatorPrefix' && $this->tempRow['value'] === "-" && $row["subtype"] === "Number") {
 				$row["value"] = "-".$row["value"];
 			}
+			// Si tempRow es una division y row es numero, la fila nueva es el valor de la división del ultimo dato en el stack con el nuevo dato
+			else if($this->tempRow['type'] === 'OperatorInfix' && $this->tempRow['value'] === "/" && $row["subtype"] === "Number"){
+				$row["value"] = array_pop($this->stack)['value'] / $row["value"];
+			}
 			else{
 				// No se hizo nada, se regresa el tempRow al stack
 				$this->stack[] = $this->tempRow;
@@ -46,9 +50,14 @@ class FormulaStack
 			$this->stack[] = Operators::startFunction($newStack);
 			// $this->stack[] = $newStack;
 		}
+
 		// Si es un signo negativo "-" se tiene que hacer una resta hacia el siguiente row
 		else if($row['type'] === 'OperatorPrefix' && $row['value'] === "-"){
 			// Se guarda el row para restar en el siguiente push
+			$this->tempRow = $row;
+		}
+		else if($row['type'] === 'OperatorInfix' && $row['value'] === "/"){
+			// Se guarda el row para dividir en el siguiente push
 			$this->tempRow = $row;
 		}
 		else{
