@@ -68,7 +68,7 @@ class FormulaStack
 	public function show()
 	{
 		if (sizeof($this->stack) === 1) {
-			return (int) $this->stack[0]['value'];
+			return (float) $this->stack[0]['value'];
 		}
 		return $this->stack;
 	}
